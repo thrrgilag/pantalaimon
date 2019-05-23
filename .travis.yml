@@ -13,9 +13,6 @@ before_install:
     - pushd olm-master && make && sudo make PREFIX="/usr" install && popd
     - rm -r olm-master
 
-virtualenv:
-    system_site_packages: true
-
 matrix:
     include:
         - python: 3.6
