@@ -267,6 +267,10 @@ class PanClient(AsyncClient):
             event.thumbnail_iv,
             event.thumbnail_hashes,
         )
+
+        logger.info(
+            f"Adding media info for {mxc_server}/{mxc_path} thumbnail to the store"
+        )
         self.media_info[(mxc_server, mxc_path)] = media
         self.pan_store.save_media(self.server_name, media)
 
