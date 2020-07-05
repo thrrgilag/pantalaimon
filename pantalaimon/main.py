@@ -32,6 +32,7 @@ from pantalaimon.log import logger
 from pantalaimon.thread_messages import DaemonResponse
 from pantalaimon.ui import UI_ENABLED
 
+keyring.core.set_keyring(keyring.core.load_keyring('keyring.backends.SecretService.Keyring'))
 
 def create_dirs(data_dir, conf_dir):
     try:
